@@ -1,7 +1,7 @@
 # Guía del Programatzaile
 # ---------------------------
 
-# 1.---- TABLAS ----
+# 1 TABLAS 
 
 * Para empezar a trabajar en una base de datos, primero tenemos que diseñar las tablas donde se guardaran esos datos.
 * Una buena estructura de datos hará que el trabajo de programación posterior sea más sencillo. Una mala estructura supondrá más trabajo y éste será más desagradable.
