@@ -58,10 +58,11 @@ HoraInicio | Fecha/Hora | Creo que se indica cuando un player asiste pero más t
 ### Relaciones entre tablas
 
 ![Relaciones](/images/RelacionesTablas.png)
+
 Como se puede intuir en la imagen. la relación es de uno a muchos desde Raids a Raids_Assist, eso quiere decir que un registro de Raids (con un únio Id) puede tener varios registros en Raids_Assist con ese mismo IdRaid. Lo que se traduce en que a una Raid pueden asistir varios jugadores. Lo mismo ocurre en la parte derecha del esquema de las relaciones, un jugador (un único Id en Players) puede tener varios registros en Raids_Assist, es decir un jugador puede ir a diferentes Raids.
 
 Ahora bien, Con lo que hemos dicho hasta ahora podría ocurrir que existiesen varios registros del mismo jugador en la misma Raid, lo cual no tiene sentido. Para evitarlo tenemos que crear un índice único en la tabla Raids_Assist sobre los campos IdRaid, IdPlayer de forma que la base de datos no va a permitr la existencia de esa repetición.
 
 ![Índice Único](/images/IndiceUnico.png)
 
-:eyes: Fijarse, la manera de definir un índice sobre dos campos o más es rellenar la casilla nombre sólo en el primero de los campos del índice.
+:eyes: Fijarse, la manera de definir un índice sobre dos campos o más es rellenar la casilla nombre del índice sólo en el primero de los campos del índice.
