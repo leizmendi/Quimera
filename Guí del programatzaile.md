@@ -24,7 +24,7 @@ Nos centraremos ahora en los Jugadores y la asistencia a las batallas. Vamos a d
 
 La primera tabla que vamos a crear es la de Jugadores/as. La denominamos Players
 
-###Players
+### Players
 Nombre del campo | Tipo de datos | Otras Características
 ------------ | ------------- | -------------
 Id | Autonumeración | Campo Clave
@@ -35,6 +35,25 @@ MainS | Texto (25) | Consulta: SELECT DISTINCT [Players].MainS FROM Players ORDE
 OffS | Texto (25) | Consulta: SELECT DISTINCT [Players].OffS FROM Players ORDER BY [Players].OffS; 
 Rango | Texto (25) | Lista de valores: Ascendente;Miembro;Raider;Suboficial;Oficial
 
+La segunda la vamos a llamar Raids (Batallas, Incursiones) en la que guardaremos la fecha y el tipo:
+
+### Raids
+Nombre del campo | Tipo de datos | Otras Características
+------------ | ------------- | -------------
+Id | Autonumeración | Campo Clave
+Fecha | Fecha/Hora | Fecha del Raid
+Raid | Texto (25) | Es un tipo, hasta aclarar los posibles tipos lo dejamos como un texto libre
+
+Para registrar los asistentes a las Raids vamos a servirnos de una tercera tabla relacionada con las dos anteriores
+
+### Raids_Assist
+Nombre del campo | Tipo de datos | Otras Características
+------------ | ------------- | -------------
+Id | Autonumeración | Campo Clave
+IdRaid | Número | Clave externa para enlazar con la tabla Raids.
+IdPlayer | Número | Clave externa para enlazar con la tabla Players.
+AsistenciaSNR | Texto (1) | S/N/R : Ní asiste, No asiste, Rotación
+HoraInicio | Fecha/Hora | Creo que se indica cuando un player asiste pero más tarde que la hora acordada.
 
 
 
