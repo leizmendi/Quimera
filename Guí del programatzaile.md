@@ -66,3 +66,5 @@ Ahora bien, Con lo que hemos dicho hasta ahora podría ocurrir que existiesen va
 ![Índice Único](/images/IndiceUnico.png)
 
 :eyes: Fijarse, la manera de definir un índice sobre dos campos o más es rellenar la casilla nombre del índice sólo en el primero de los campos del índice.
+
+Hasta aquí la primera lectura @martineizrod espero sus comentarios :ear: :ear:
