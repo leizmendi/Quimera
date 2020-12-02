@@ -31,6 +31,20 @@ WHERE Players.Clase= "Warrior" OR Players.Clase= "Druida";
 
 Y el resultado de la consulta...
 
-![Consulta ](/images/Consulta04.png)
+![Consulta 4](/images/Consulta04.png)
 
+# 2 CONSULTAS DE TOTALES
 
+Con una consulta de totales, podremos calcular totales, promedios, cuenta... sobre uno o vairios cmpos, agrupando por uno o varios campos.
+
+![Consulta 5](/images/Consulta05.png)
+
+``` SQL
+SELECT Players.Raza, Count(Players.Id) AS CuentaDeId
+FROM Players
+GROUP BY Players.Raza;
+```
+
+Y el resultado de la consulta...
+
+![Consulta 6](/images/Consulta06.png)
