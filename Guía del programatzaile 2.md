@@ -6,14 +6,18 @@
 Al realizar una consulta a la base de datos podemos obtener un conjunto de registros diferente de la propia tabla. Seleccionar algunos de los campos, dando a los datos obtenidos el formato que se precise, definir uno o más criterios para aplicar un filtro sobre los datos a obtener, ordenar los registros por uno o varios campos,
 
 ![Consulta 1](/images/Consulta01.png)
+
 En la imagen vemos la pantalla de diseño de una consulta. En este caso estamos seleccionando los Players cuyo campo Raza empieza por Elf. La interfaz gráfica del diseño de la consulta hace más fácil e intuitiva esta tarea, pero en definitiva la consulta se guardará y ejecutará meidante la sentencia SQL que le corresponda que podemos obtener en la Vista Diseño de la misma y que en este caso será:
 
-```SQL
+``` SQL
 SELECT Players.Id, Players.Player, Players.Raza, Players.Clase
 FROM Players
 WHERE (((Players.Raza) Like "elf*"));
 ```
 
+Y el resultado de la consulta...
+
+![Consulta 2](/images/Consulta02.png)
 
 ## Quimera 2020.xlsx
 ![Roster](/images/Roster.png)
