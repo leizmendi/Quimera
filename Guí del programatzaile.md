@@ -8,7 +8,7 @@
 * Aunque puede resultar una tarea costosa, siempre es posible redefinir la estructura de datos. 
 * Los nombres que pongamos tanto a las tablas como a los campos pueden ser una ayuda si están bien puestos. Es más fácil pensar y visualizar entidades bien nombradas.
 
-En este proyecto, a modo de ejercicio, vamos a migrar desde una hoja de Excel con numerosos datos relacionados a una base de datos Access. Comprobaremos que para manejar Access necesitamos un trabajo previo de diseño de tablas, consultas y formularios y de programación en VBA para conseguir que la entrada y salida de datos sea fácil y accesible a cualquiera. Pero la base de datos nos proporcionará una aplicación sólida y capaz de procesar una cantidad mucho mayor y con mayor eficiencia que la hoja Excel.
+En este proyecto, a modo de ejercicio, vamos a migrar desde una hoja de Excel con numerosos datos relacionados a una base de datos Access. Comprobaremos que para manejar Access necesitamos un trabajo previo de diseño de tablas, consultas y formularios y de programación en VBA para conseguir que la entrada y salida de datos sea fácil y accesible a cualquiera. Pero la base de datos nos proporcionará una aplicación sólida y capaz de procesar una cantidad mayor de datos y más eficientemente que la hoja Excel.
 
 ## Quimera 2020.xlsx
 ![Roster](/images/Roster.png)
@@ -63,7 +63,7 @@ HoraInicio | Fecha/Hora | Creo que se indica cuando un player asiste pero más t
 
 Como se puede intuir en la imagen. la relación es de uno a muchos desde Raids a Raids_Assist, eso quiere decir que un registro de Raids (con un únio Id) puede tener varios registros en Raids_Assist con ese mismo IdRaid. Lo que se traduce en que a una Raid pueden asistir varios jugadores. Lo mismo ocurre en la parte derecha del esquema de las relaciones, un jugador (un único Id en Players) puede tener varios registros en Raids_Assist, es decir un jugador puede ir a diferentes Raids.
 
-Ahora bien, Con lo que hemos dicho hasta ahora podría ocurrir que existiesen varios registros del mismo jugador en la misma Raid, lo cual no tiene sentido. Para evitarlo tenemos que crear un índice único en la tabla Raids_Assist sobre los campos IdRaid, IdPlayer de forma que la base de datos no va a permitr la existencia de esa repetición.
+Ahora bien, Con lo que hemos dicho hasta ahora podría ocurrir que existiesen varios registros del mismo jugador en la misma Raid, lo cual no tiene sentido. Para evitarlo tenemos que crear un índice único en la tabla Raids_Assist sobre los campos IdRaid, IdPlayer de forma que la base de datos no va a permitir la existencia de esa repetición.
 
 ![Índice Único](/images/IndiceUnico.png)
 
